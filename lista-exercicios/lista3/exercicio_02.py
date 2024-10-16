@@ -21,7 +21,7 @@ def main():
 
     resultado = None
 
-    # Na versão 3.10 do Python, foi introduzido o match case, equivalente ao switch case em C, por exemplo.
+    # Requer Python 3.10 ou superior
     match operador:
         case "+":
             resultado = somar(numero1, numero2)
