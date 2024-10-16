@@ -56,7 +56,6 @@ def exibir_resumo(total_varejo, quantidades_vendidas):
     print(f"Valor total a varejo: ${total_varejo:.2f}")
     print("\nQuantidades vendidas de cada produto:")
 
-    # Ordenar os produtos
     for produto in sorted(precos.keys()):
         quantidade = quantidades_vendidas.get(produto, 0)
         valor = precos[produto] * quantidade
