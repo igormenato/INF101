@@ -5,4 +5,9 @@ def calcular_tabuada():
         print()
 
 
-calcular_tabuada()
+def main():
+    calcular_tabuada()
+
+
+if __name__ == "__main__":
+    main()
