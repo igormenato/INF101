@@ -1,12 +1,13 @@
-def calcular_tabuada():
-    for i in range(1, 6):
-        for j in range(1, 11):
-            print("{:2d} x {:2d} = {:2d}".format(i, j, i * j), end="\t")
+def imprimir_tabuada():
+    for multiplicador in range(1, 11):
+        for numero in range(1, 6):
+            resultado = numero * multiplicador
+            print(f"{numero} x {multiplicador} = {resultado}", end="\t")
         print()
 
 
 def main():
-    calcular_tabuada()
+    imprimir_tabuada()
 
 
 if __name__ == "__main__":
