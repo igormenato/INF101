@@ -1,7 +1,6 @@
 # Diretórios do projeto
 SRC_DIR = src
 BIN_DIR = bin
-DATA_DIR = data
 
 # Lista todos os arquivos .c do diretório fonte
 SOURCES = $(wildcard $(SRC_DIR)/*.c)
@@ -17,10 +16,10 @@ endif
 EXECUTABLES = $(patsubst $(SRC_DIR)/%.c,$(BIN_DIR)/%$(EXT),$(SOURCES))
 
 # Regra principal
-all: $(BIN_DIR) $(DATA_DIR) $(EXECUTABLES)
+all: $(BIN_DIR) $(EXECUTABLES)
 
-# Cria diretórios
-$(BIN_DIR) $(DATA_DIR):
+# Cria diretório bin
+$(BIN_DIR):
 	mkdir -p $@
 
 # Regra de compilação
@@ -29,5 +28,4 @@ $(BIN_DIR)/%$(EXT): $(SRC_DIR)/%.c
 
 # Regra de limpeza
 clean:
-	rm -f $(BIN_DIR)/*$(EXT)
-	rm -rf $(BIN_DIR) $(DATA_DIR)
+	rm -rf $(BIN_DIR)

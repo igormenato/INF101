@@ -6,14 +6,11 @@ int main()
 {
   FILE *arquivo;
   char nomeArquivo[100];
-  char caminhoCompleto[150] = "../data/";
 
   printf("Digite o nome do arquivo que deseja criar: ");
   scanf("%s", nomeArquivo);
 
-  strcat(caminhoCompleto, nomeArquivo);
-
-  arquivo = fopen(caminhoCompleto, "w");
+  arquivo = fopen(nomeArquivo, "w");
 
   if (arquivo == NULL)
   {
